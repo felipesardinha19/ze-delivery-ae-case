@@ -1,6 +1,6 @@
 # Ze Delivery - Case Tecnico Analytics Engineer Junior
 
-Solucao SQL-first desenvolvida em PostgreSQL via DBeaver para criar uma camada analitica simples e responder perguntas de negocio sobre receita, clientes, categorias e qualidade dos dados.
+Solucao SQL-first desenvolvida em PostgreSQL para criar uma camada analitica simples e responder perguntas de negocio sobre receita, clientes, categorias e qualidade dos dados.
 
 ## Estrutura
 
