@@ -1,0 +1,9 @@
+product_id,product_name,category,list_price
+PRD001,Notebook Stand,Acessorios,120.00
+PRD002,USB-C Cable,Acessorios,45.00
+PRD003,Keyboard,Perifericos,260.00
+PRD004,Mouse,Perifericos,140.00
+PRD005,Monitor 24in,Monitores,890.00
+PRD006,Gift Card,,100.00
+PRD007,Webcam,Perifericos,320.00
+PRD008,Desk Lamp,Escritorio,180.00

@@ -1,0 +1,5 @@
+refund_id,order_id,refund_date,amount,reason
+R001,O1004,2026-02-15,100.00,customer_request
+R002,O1007,2026-03-14,260.00,damaged_product
+R003,O1005,2026-02-22,320.00,canceled_order
+R004,O1011,2026-04-12,45.00,price_adjustment
