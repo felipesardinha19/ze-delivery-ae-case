@@ -10,7 +10,7 @@ select
     coalesce(i.total_quantity, 0) as total_quantity,
     coalesce(i.gross_revenue, 0) as gross_revenue,
     coalesce(p.payment_events, 0) as payment_events,
-    coalesce(p.paid_amount, 0) as captured_amount,
+    coalesce(p.captured_amount, 0) as captured_amount
     coalesce(p.has_valid_payment, 0) as has_valid_payment,
     coalesce(r.refund_events, 0) as refund_events,
     coalesce(r.refund_amount, 0) as refund_amount,
