@@ -8,7 +8,7 @@ select
                 then amount
             else 0 
         end
-    ) as paid_amount,
+    ) as captured_amount,
     sum(
         case
             when payment_status = 'failed'

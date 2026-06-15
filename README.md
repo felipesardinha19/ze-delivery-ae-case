@@ -43,9 +43,9 @@ Ela possui granularidade de uma linha por pedido e concentra cliente, data do pe
 | Mes | Receita liquida |
 |---|---:|
 | 2026-01-01 | 610.00 |
-| 2026-02-01 | 1090.00 |
-| 2026-03-01 | 1635.00 |
-| 2026-04-01 | 1195.00 |
+| 2026-02-01 | 990.00 |
+| 2026-03-01 | 1375.00 |
+| 2026-04-01 | 1150.00 |
 
 ### 2. Clientes com primeira compra valida por mes
 
@@ -68,9 +68,13 @@ Ela possui granularidade de uma linha por pedido e concentra cliente, data do pe
 |---|---:|
 | Ticket medio bruto | 377.50 |
 
-## Problemas de qualidade encontrados
+## 5. Problemas de qualidade encontrados
 
-- O produto `PRD006` estava sem categoria. Na camada staging, ele foi tratado como `sem_categoria` para manter a analise agrupavel.
+1 - O produto `PRD006` estava sem categoria. Na camada staging, ele foi tratado como `sem_categoria` para manter a analise agrupavel.
+
+2 - Ha um possivel pagamento duplicado na tabela bruta. O order `O1009` possui dois registros `captured` de mesmo valor na tabela bruta de pagamentos `raw.payments`. Ja na tabela intermediate `int_items_by_order`, vemos que esse pedido possui apenas uma linha de item, com receita bruta de `120.00`. Ou seja, os pagamentos somam `240.00`, mas os itens do pedido somam `120.00`, indicando um ponto que precisaria de conciliacao.
+
+3 - Existem pedidos com reembolso parcial ou total. Por isso, a receita liquida foi calculada descontando os reembolsos associados ao pedido. Um exemplo e o pedido `O1007`, que teve receita bruta de `260.00` e reembolso de `260.00`, ficando com receita liquida zero.
 
 ## Validacoes realizadas
 
